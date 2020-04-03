@@ -1,6 +1,6 @@
 ## Title
 
-    For Study LeetCode.
+    For Study LeetCode
 
 ## License
 
