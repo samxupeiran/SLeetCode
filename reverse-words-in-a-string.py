@@ -10,4 +10,4 @@ class Solution(object):
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.reverseWords("the sky is blue"))
+    print(s.reverseWords("the sky is blue    "))
