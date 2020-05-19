@@ -1,15 +1,15 @@
-# coding: utf-8
+# @lc app=leetcode.cn id=1 lang=python3
+#
+# [1] 两数之和
+#
 
-# @Author: peiran.xu
+
+# @lc code=start
+from typing import List
 
 
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i, j in enumerate(nums):
             k = i + 1
             if nums[k:].count(target - j) > 0:
@@ -17,6 +17,7 @@ class Solution(object):
                     b = nums.index(target - j, k)
                     return (i, b)
                     k = b + 1
+# @lc code=end
 
 
 if __name__ == "__main__":
