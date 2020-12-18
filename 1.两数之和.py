@@ -10,13 +10,17 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i, j in enumerate(nums):
-            k = i + 1
-            if nums[k:].count(target - j) > 0:
-                for n in range(nums[k:].count(target - j)):
-                    b = nums.index(target - j, k)
-                    return (i, b)
-                    k = b + 1
+        # for i, j in enumerate(nums):
+        #     k = i + 1
+        #     if nums[k:].count(target - j) > 0:
+        #         for n in range(nums[k:].count(target - j)):
+        #             b = nums.index(target - j, k)
+        #             return (i, b)
+        #             k = b + 1
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return i, j
 # @lc code=end
 
 
